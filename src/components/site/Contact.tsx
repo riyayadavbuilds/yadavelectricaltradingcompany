@@ -22,10 +22,10 @@ export function Contact() {
 
           <div className="grid gap-4">
             {([
-              { icon: MapPin, t: "Address", d: "Kankrola Main Bus Stand, Sector 91, Gurugram, Haryana", href: undefined as string | undefined, accent: false },
-              { icon: Phone, t: "Call", d: "+91 00000 00000", href: "tel:+910000000000", accent: true },
-              { icon: MessageCircle, t: "WhatsApp", d: "Chat with the owner directly", href: "https://wa.me/910000000000", accent: false },
-              { icon: Clock, t: "Hours", d: "Mon–Sun · 8:00 AM – 10:00 PM", href: undefined as string | undefined, accent: false },
+              { icon: MapPin, t: "Address", d: "Kankrola Main Bus Stand, Sector 91, Gurugram, Haryana", href: "https://www.google.com/maps/search/?api=1&query=Yadav+Electrical+Trading+Company+Kankrola+Main+Bus+Stand+Sector+91+Gurugram", accent: false },
+              { icon: Phone, t: "Call", d: "+91 98734 90167", href: "tel:+919873490167", accent: true },
+              { icon: MessageCircle, t: "WhatsApp", d: "Chat with Mr. Harkesh Yadav", href: "https://wa.me/919873490167", accent: false },
+              { icon: Clock, t: "Open", d: "7:00 AM – 10:00 PM · All Days", href: undefined as string | undefined, accent: false },
             ]).map((c) => {
               const Inner = (
                 <div className="group flex items-start gap-4 rounded-2xl glass p-5 transition-all hover:-translate-y-0.5 hover:border-[var(--electric)]/40">
@@ -38,17 +38,17 @@ export function Contact() {
                   </div>
                 </div>
               );
-              return c.href ? <a key={c.t} href={c.href}>{Inner}</a> : <div key={c.t}>{Inner}</div>;
+              return c.href ? <a key={c.t} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}>{Inner}</a> : <div key={c.t}>{Inner}</div>;
             })}
 
-            <a href="https://wa.me/910000000000" className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-6 py-4 font-display font-semibold text-black transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]">
+            <a href="https://wa.me/919873490167" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-6 py-4 font-display font-semibold text-black transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)]">
               <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
             </a>
           </div>
         </div>
       </div>
 
-      <a href="https://wa.me/910000000000" aria-label="WhatsApp" className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-black shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-transform hover:scale-110">
+      <a href="https://wa.me/919873490167" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-black shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-transform hover:scale-110">
         <MessageCircle className="h-6 w-6" />
         <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-emerald-500/40" />
       </a>

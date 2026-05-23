@@ -14,11 +14,11 @@ export function Footer() {
                 <Zap className="h-5 w-5 text-black" strokeWidth={2.5} />
               </span>
               <div>
-                <div className="font-display font-bold">Yadav Electricals & Battery House</div>
-                <div className="text-xs text-muted-foreground">Kankrola Main Bus Stand, Sector 91, Gurugram</div>
+                <div className="font-display font-bold">Yadav Electrical Trading Company</div>
+                <div className="text-xs text-muted-foreground">Kankrola Main Bus Stand, Sector 91, Gurugram · Open 7 AM – 10 PM</div>
               </div>
             </div>
-            <p className="mt-4 max-w-md text-sm text-muted-foreground">Genuine inverters, batteries, coolers, fans and electrical accessories — backed by honest service Gurugram has trusted for years.</p>
+            <p className="mt-4 max-w-md text-sm text-muted-foreground">Trusted Power Solutions in Gurugram. Genuine inverters, batteries, wiring, fans, coolers and electrical accessories — backed by honest service for years.</p>
           </div>
           <div>
             <div className="text-xs uppercase tracking-widest text-muted-foreground">Quick links</div>
@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Yadav Electricals & Battery House. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Yadav Electrical Trading Company. All rights reserved.</div>
           <div>Designed with ⚡ for Gurugram.</div>
         </div>
       </div>

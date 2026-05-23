@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Sparkles } from "lucide-react";
 import inverter from "@/assets/inverter.png";
-import owner from "@/assets/owner.jpg";
+import owner from "@/assets/owner-badge.jpg";
 import battery from "@/assets/battery.png";
 import cooler from "@/assets/cooler.png";
 import fan from "@/assets/fan.png";
@@ -10,9 +10,9 @@ import wiring from "@/assets/wiring.png";
 const orbit = [
   { label: "Batteries", img: battery },
   { label: "Inverters", img: inverter },
-  { label: "Coolers", img: cooler },
-  { label: "Fans", img: fan },
   { label: "Wiring", img: wiring },
+  { label: "Fans", img: fan },
+  { label: "Coolers", img: cooler },
   { label: "Accessories", img: battery },
 ];
 
@@ -58,9 +58,18 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl"
           >
-            Yadav <span className="text-gradient">Electricals</span> <br />
-            & <span className="text-gradient">Battery House</span>
+            Yadav <span className="text-gradient">Electrical</span> <br />
+            Trading <span className="text-gradient">Company</span>
           </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.18 }}
+            className="mt-4 text-sm font-medium uppercase tracking-[0.3em] text-[var(--electric)]/90"
+          >
+            Trusted Power Solutions in Gurugram
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -78,14 +87,14 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-9 flex flex-wrap items-center gap-3"
           >
-            <a href="tel:+910000000000" className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[var(--electric)] px-6 py-3 text-sm font-semibold text-black transition-all hover:scale-[1.03] hover:shadow-[0_0_50px_#00C2FF]">
+            <a href="tel:+919873490167" className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[var(--electric)] px-6 py-3 text-sm font-semibold text-black transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,194,255,0.55)]">
               <Phone className="h-4 w-4" /> Call Now
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </a>
-            <a href="https://wa.me/910000000000" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-white/10">
+            <a href="https://wa.me/919873490167" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-white/10">
               <MessageCircle className="h-4 w-4 text-emerald-400" /> WhatsApp Us
             </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--neon)]/40 px-6 py-3 text-sm font-semibold text-[var(--neon)] transition-all hover:bg-[var(--neon)]/10">
+            <a href="https://www.google.com/maps/search/?api=1&query=Yadav+Electrical+Trading+Company+Kankrola+Main+Bus+Stand+Sector+91+Gurugram" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-[var(--electric)]/40 px-6 py-3 text-sm font-semibold text-[var(--electric)] transition-all hover:bg-[var(--electric)]/10">
               <MapPin className="h-4 w-4" /> Visit Store
             </a>
           </motion.div>
@@ -98,8 +107,8 @@ export function Hero() {
           >
             {[
               { k: "15+", v: "Years" },
-              { k: "10k+", v: "Customers" },
-              { k: "24/7", v: "Support" },
+              { k: "30k+", v: "Customers" },
+              { k: "50k+", v: "Delivered" },
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-3xl font-bold text-gradient">{s.k}</div>
@@ -124,10 +133,9 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="absolute inset-[18%] overflow-hidden rounded-full border-2 border-[var(--electric)]/40 glow-blue"
+            className="absolute inset-[18%] overflow-hidden rounded-full border border-[var(--electric)]/30 shadow-[0_0_50px_-10px_rgba(0,194,255,0.45)]"
           >
-            <img src={owner} alt="Owner of Yadav Electricals & Battery House" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <img src={owner} alt="Mr. Harkesh Yadav — Owner, Yadav Electrical Trading Company" className="h-full w-full object-cover" />
           </motion.div>
 
           {/* Orbiting product chips */}
