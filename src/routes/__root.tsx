@@ -76,10 +76,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Trusted Power Solutions in Gurugram. Inverters, batteries, wiring, fans & coolers at Kankrola Main Bus Stand, Sector 91. Owner: Mr. Harkesh Yadav." },
       { name: "author", content: "Yadav Electrical Trading Company" },
       { property: "og:title", content: "Yadav Electrical Trading Company — Gurugram" },
-      { property: "og:description", content: "Inverters, batteries, coolers, fans & wiring. Sector 91, Gurugram." },
+      { property: "og:description", content: "Trusted Power Solutions in Gurugram. Inverters, batteries, wiring, fans & coolers at Kankrola Main Bus Stand, Sector 91. Owner: Mr. Harkesh Yadav." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Yadav Electrical Trading Company — Gurugram" },
+      { name: "twitter:description", content: "Trusted Power Solutions in Gurugram. Inverters, batteries, wiring, fans & coolers at Kankrola Main Bus Stand, Sector 91. Owner: Mr. Harkesh Yadav." },
     ],
     links: [
       {
