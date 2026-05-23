@@ -23,8 +23,8 @@ export function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 ${
-          scrolled ? "glass-strong mx-4 md:mx-auto" : "mx-4 md:mx-auto bg-transparent"
+        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 mx-4 md:mx-auto ${
+          scrolled ? "glass-strong shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]" : "glass"
         }`}
       >
         <a href="#top" className="flex items-center gap-2">
@@ -33,8 +33,8 @@ export function Navbar() {
             <span className="absolute inset-0 rounded-xl bg-[var(--electric)] opacity-40 blur-md" />
           </span>
           <div className="leading-tight">
-            <div className="font-display text-sm font-bold tracking-tight md:text-base">Yadav Electricals</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">& Battery House</div>
+            <div className="font-display text-sm font-bold tracking-tight md:text-base">Yadav Electrical</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Trading Company</div>
           </div>
         </a>
         <div className="hidden items-center gap-1 md:flex">
@@ -44,7 +44,7 @@ export function Navbar() {
             </a>
           ))}
         </div>
-        <a href="tel:+910000000000" className="group relative inline-flex items-center gap-2 rounded-full bg-[var(--electric)] px-4 py-2 text-sm font-semibold text-black transition-all hover:shadow-[0_0_30px_#00C2FF]">
+        <a href="tel:+919873490167" className="group relative inline-flex items-center gap-2 rounded-full bg-[var(--electric)] px-4 py-2 text-sm font-semibold text-black transition-all hover:shadow-[0_0_24px_rgba(0,194,255,0.5)]">
           <Phone className="h-4 w-4" />
           <span className="hidden sm:inline">Call Now</span>
         </a>

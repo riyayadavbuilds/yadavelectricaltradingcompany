@@ -72,8 +72,8 @@ export function About() {
         <div className="mt-16 grid gap-4 rounded-3xl glass-strong p-8 md:grid-cols-3 md:p-12">
           {[
             { v: 15, s: "+", l: "Years of service" },
-            { v: 10000, s: "+", l: "Happy customers" },
-            { v: 25000, s: "+", l: "Products delivered" },
+            { v: 30000, s: "+", l: "Happy customers" },
+            { v: 50000, s: "+", l: "Products delivered" },
           ].map((c) => (
             <div key={c.l} className="text-center">
               <div className="font-display text-5xl font-bold text-gradient md:text-6xl">
