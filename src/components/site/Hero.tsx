@@ -106,9 +106,9 @@ export function Hero() {
             className="mt-12 grid max-w-md grid-cols-3 gap-6 text-sm"
           >
             {[
-              { k: "15+", v: "Years" },
+              { k: "20+", v: "Years" },
               { k: "30k+", v: "Customers" },
-              { k: "50k+", v: "Delivered" },
+              { k: "70k+", v: "Delivered" },
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-3xl font-bold text-gradient">{s.k}</div>
