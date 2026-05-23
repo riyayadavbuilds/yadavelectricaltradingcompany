@@ -12,8 +12,8 @@ export function Contact() {
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
           <div className="overflow-hidden rounded-3xl glass-strong p-2">
             <iframe
-              title="Yadav Electricals & Battery House map"
-              src="https://www.google.com/maps?q=Kankrola+Main+Bus+Stand+Sector+91+Gurugram&output=embed"
+              title="Yadav Electrical Trading Company map"
+              src="https://www.google.com/maps?q=Yadav+Electrical+Trading+Company+Kankrola+Bus+Stand+Sector+91+Gurugram&output=embed"
               className="h-[440px] w-full rounded-2xl border-0"
               style={{ filter: "grayscale(60%) contrast(1.1)" }}
               loading="lazy"
