@@ -1,6 +1,8 @@
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 
 export function Contact() {
+  const shopMapLink = "https://share.google/mhPiMDQcakYCXs0zZ";
+
   return (
     <section id="contact" className="relative py-28">
       <div className="mx-auto max-w-6xl px-6">
@@ -10,19 +12,24 @@ export function Contact() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
-          <div className="overflow-hidden rounded-3xl glass-strong p-2">
-            <iframe
-              title="Yadav Electrical Trading Company map"
-              src="https://www.google.com/maps?q=Yadav+Electrical+Trading+Company+Main+Bus+Stand+Kankrola+Bhangrola+Gurugram&output=embed"
-              className="h-[440px] w-full rounded-2xl border-0"
-              style={{ filter: "grayscale(60%) contrast(1.1)" }}
-              loading="lazy"
-            />
-          </div>
+          <a href={shopMapLink} target="_blank" rel="noopener noreferrer" className="group overflow-hidden rounded-3xl glass-strong p-2">
+            <div className="relative grid h-[440px] place-items-center overflow-hidden rounded-2xl border border-[var(--electric)]/15 bg-[radial-gradient(circle_at_50%_40%,rgba(251,191,36,0.18),transparent_34%),linear-gradient(135deg,rgba(15,23,42,0.92),rgba(2,6,23,0.96))]">
+              <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:42px_42px]" />
+              <div className="absolute h-72 w-72 rounded-full border border-[var(--electric)]/25 shadow-[0_0_80px_rgba(251,191,36,0.18)] transition-transform duration-700 group-hover:scale-110" />
+              <div className="relative z-10 text-center">
+                <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-[var(--electric)]/15 ring-1 ring-[var(--electric)]/40 shadow-[0_0_45px_rgba(251,191,36,0.2)]">
+                  <MapPin className="h-9 w-9 text-[var(--electric)]" />
+                </div>
+                <div className="mt-6 text-xs uppercase tracking-[0.35em] text-[var(--electric)]">Correct Google location</div>
+                <div className="mt-3 font-display text-3xl font-bold">Open shop map</div>
+                <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-muted-foreground">Yadav Electrical Trading Company · Main Bus Stand, Kankrola Bhangrola</p>
+              </div>
+            </div>
+          </a>
 
           <div className="grid gap-4">
             {([
-              { icon: MapPin, t: "Address", d: "Main Bus Stand, Kankrola Bhangrola, Gurugram, Haryana", href: "https://www.google.com/maps/search/?api=1&query=Yadav+Electrical+Trading+Company+Main+Bus+Stand+Kankrola+Bhangrola+Gurugram", accent: false },
+              { icon: MapPin, t: "Address", d: "Main Bus Stand, Kankrola Bhangrola, Gurugram, Haryana", href: shopMapLink, accent: false },
               { icon: Phone, t: "Call", d: "+91 98734 90167", href: "tel:+919873490167", accent: true },
               { icon: MessageCircle, t: "WhatsApp", d: "Chat with Mr. Harkesh Yadav", href: "https://wa.me/919873490167", accent: false },
               { icon: Clock, t: "Open", d: "7:00 AM – 10:00 PM · All Days", href: undefined as string | undefined, accent: false },
