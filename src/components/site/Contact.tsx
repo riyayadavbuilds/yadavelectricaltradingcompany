@@ -13,7 +13,7 @@ export function Contact() {
           <div className="overflow-hidden rounded-3xl glass-strong p-2">
             <iframe
               title="Yadav Electrical Trading Company map"
-              src="https://www.google.com/maps?q=Yadav+Electrical+Trading+Company+Kankrola+Bus+Stand+Sector+91+Gurugram&output=embed"
+              src="https://www.google.com/maps?q=Yadav+Electrical+Trading+Company+Main+Bus+Stand+Kankrola+Bhangrola+Gurugram&output=embed"
               className="h-[440px] w-full rounded-2xl border-0"
               style={{ filter: "grayscale(60%) contrast(1.1)" }}
               loading="lazy"
@@ -22,7 +22,7 @@ export function Contact() {
 
           <div className="grid gap-4">
             {([
-              { icon: MapPin, t: "Address", d: "Kankrola Main Bus Stand, Sector 91, Gurugram, Haryana", href: "https://www.google.com/maps/search/?api=1&query=Yadav+Electrical+Trading+Company+Kankrola+Main+Bus+Stand+Sector+91+Gurugram", accent: false },
+              { icon: MapPin, t: "Address", d: "Main Bus Stand, Kankrola Bhangrola, Gurugram, Haryana", href: "https://www.google.com/maps/search/?api=1&query=Yadav+Electrical+Trading+Company+Main+Bus+Stand+Kankrola+Bhangrola+Gurugram", accent: false },
               { icon: Phone, t: "Call", d: "+91 98734 90167", href: "tel:+919873490167", accent: true },
               { icon: MessageCircle, t: "WhatsApp", d: "Chat with Mr. Harkesh Yadav", href: "https://wa.me/919873490167", accent: false },
               { icon: Clock, t: "Open", d: "7:00 AM – 10:00 PM · All Days", href: undefined as string | undefined, accent: false },
