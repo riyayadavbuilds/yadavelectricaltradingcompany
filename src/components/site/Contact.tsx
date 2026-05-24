@@ -1,8 +1,7 @@
 import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
 
 export function Contact() {
-  const shopMapLink =
-    "https://www.google.com/maps/search/Yadav+Electrical+Trading+Company+Main+Bus+Stand+Kankrola+Bhangrola+Gurugram";
+  const shopMapLink = "https://share.google/mhPiMDQcakYCXs0zZ";
   const shopMapEmbed =
     "https://www.google.com/maps?q=Yadav%20Electrical%20Trading%20Company%20Main%20Bus%20Stand%20Kankrola%20Bhangrola%20Gurugram&output=embed";
 
