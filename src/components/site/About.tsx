@@ -1,87 +1,73 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { ShieldCheck, BadgeIndianRupee, HeartHandshake, Wrench } from "lucide-react";
+import { Users, Smile, CheckCircle2, ArrowRight } from "lucide-react";
+import owner from "@/assets/owner.jpg";
 
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const [n, setN] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        const start = performance.now();
-        const dur = 1600;
-        const tick = (t: number) => {
-          const p = Math.min(1, (t - start) / dur);
-          setN(Math.floor(p * to));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-        io.disconnect();
-      }
-    });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [to]);
-  return <span ref={ref}>{n.toLocaleString("en-IN")}{suffix}</span>;
-}
-
-const traits = [
-  { icon: ShieldCheck, title: "100% Genuine", desc: "Only authorised brand stock with manufacturer warranty." },
-  { icon: BadgeIndianRupee, title: "Best Pricing", desc: "Honest, transparent rates — better than online prices." },
-  { icon: HeartHandshake, title: "Trusted Locally", desc: "Serving Sector 91 and nearby Gurugram for years." },
-  { icon: Wrench, title: "Expert Service", desc: "In-house battery & inverter installation experts." },
+const stats = [
+  { icon: Users, k: "20+", l: "Years of Experience" },
+  { icon: Smile, k: "1000+", l: "Happy Customers" },
+  { icon: CheckCircle2, k: "500+", l: "Installations Completed" },
 ];
 
 export function About() {
   return (
-    <section id="about" className="relative py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,194,255,0.08),_transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl px-6">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-          <div className="text-xs uppercase tracking-[0.4em] text-[var(--electric)]">Our Promise</div>
-          <h2 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">
-            Powering homes with <span className="text-gradient">trust</span> — one connection at a time.
-          </h2>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            For years, families and businesses across Gurugram have relied on us for reliable inverters,
-            batteries, and electricals. Our promise is simple — genuine products, honest pricing, and service
-            that treats every customer like family.
-          </p>
-        </motion.div>
+    <section id="about" className="relative bg-white py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden rounded-3xl"
+          >
+            <img
+              src={owner}
+              alt="Electrical technician installing inverter and battery system"
+              className="h-[520px] w-full object-cover"
+            />
+          </motion.div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-4">
-          {traits.map((t, i) => (
-            <motion.div
-              key={t.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-2xl glass p-6 transition-all hover:-translate-y-1 hover:border-[var(--electric)]/40"
-            >
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[var(--electric)]/10 blur-2xl opacity-0 transition-opacity group-hover:opacity-100" />
-              <t.icon className="h-7 w-7 text-[var(--electric)]" />
-              <div className="mt-4 font-display font-semibold">{t.title}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{t.desc}</div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-16 grid gap-4 rounded-3xl glass-strong p-8 md:grid-cols-3 md:p-12">
-          {[
-            { v: 20, s: "+", l: "Years of service" },
-            { v: 30000, s: "+", l: "Happy customers" },
-            { v: 70000, s: "+", l: "Products delivered" },
-          ].map((c) => (
-            <div key={c.l} className="text-center">
-              <div className="font-display text-5xl font-bold text-gradient md:text-6xl">
-                <Counter to={c.v} suffix={c.s} />
-              </div>
-              <div className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">{c.l}</div>
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[var(--primary)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--primary)]" />
+              About Us
             </div>
-          ))}
+            <h2 className="mt-3 font-display text-4xl font-extrabold leading-tight text-[var(--navy)] md:text-5xl">
+              Powering Homes &amp;
+              <br />
+              Businesses with Trust
+            </h2>
+            <p className="mt-5 max-w-xl text-base text-slate-600">
+              We are a leading electrical solutions provider in Gurugram,
+              offering high-quality products and professional installation
+              services. Customer satisfaction and reliability are our top
+              priorities.
+            </p>
+
+            <a
+              href="#features"
+              className="group mt-7 inline-flex items-center gap-2 rounded-xl bg-[var(--primary)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_28px_-10px_rgba(37,99,235,0.55)] transition-transform hover:scale-[1.02]"
+            >
+              Learn More
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-3">
+              {stats.map((s) => (
+                <div key={s.l} className="flex items-start gap-3">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[var(--accent)] text-[var(--primary)]">
+                    <s.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-display text-2xl font-extrabold text-[var(--navy)]">
+                      {s.k}
+                    </div>
+                    <div className="text-xs text-slate-500">{s.l}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
