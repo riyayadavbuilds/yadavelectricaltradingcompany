@@ -6,31 +6,31 @@ export function Contact() {
     "https://www.google.com/maps?q=Yadav%20Electrical%20Trading%20Company%20Main%20Bus%20Stand%20Kankrola%20Bhangrola%20Gurugram&output=embed";
 
   return (
-    <section id="contact" className="relative py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contact" className="relative bg-white py-20">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <div className="text-xs uppercase tracking-[0.4em] text-[var(--electric)]">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-[var(--primary)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--primary)]" />
             Visit · Call · WhatsApp
           </div>
-          <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
-            Drop by the <span className="text-gradient">store</span>.
+          <h2 className="mt-3 font-display text-3xl font-extrabold text-[var(--navy)] md:text-4xl">
+            Drop by the store
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
-          <div className="relative overflow-hidden rounded-3xl glass-strong p-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.18)]">
             <iframe
               title="Yadav Electrical Trading Company map"
               src={shopMapEmbed}
               className="h-[440px] w-full rounded-2xl border-0"
-              style={{ filter: "grayscale(60%) contrast(1.1)" }}
               loading="lazy"
             />
             <a
               href={shopMapLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-6 left-6 inline-flex items-center gap-2 rounded-2xl bg-[var(--electric)] px-5 py-3 font-display font-semibold text-black shadow-[0_0_30px_rgba(251,191,36,0.35)] transition-all hover:scale-[1.02]"
+              className="absolute bottom-6 left-6 inline-flex items-center gap-2 rounded-2xl bg-[var(--primary)] px-5 py-3 font-display font-semibold text-white shadow-[0_10px_30px_-10px_rgba(37,99,235,0.55)] transition-all hover:scale-[1.02]"
             >
               <MapPin className="h-5 w-5" /> Open in Google Maps
             </a>
@@ -68,16 +68,16 @@ export function Contact() {
               },
             ].map((c) => {
               const Inner = (
-                <div className="group flex items-start gap-4 rounded-2xl glass p-5 transition-all hover:-translate-y-0.5 hover:border-[var(--electric)]/40">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[var(--electric)]/10 ring-1 ring-[var(--electric)]/30">
-                    <c.icon className="h-5 w-5 text-[var(--electric)]" />
+                <div className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-[var(--primary)]/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.18)]">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[var(--accent)] text-[var(--primary)]">
+                    <c.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                    <div className="text-xs uppercase tracking-widest text-slate-500">
                       {c.t}
                     </div>
                     <div
-                      className={`mt-1 font-display ${c.accent ? "text-xl font-bold text-gradient" : "text-base"}`}
+                      className={`mt-1 font-display ${c.accent ? "text-xl font-bold text-[var(--primary)]" : "text-base text-[var(--navy)]"}`}
                     >
                       {c.d}
                     </div>
@@ -102,7 +102,7 @@ export function Contact() {
               href="https://wa.me/919873490167"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-6 py-4 font-display font-semibold text-black transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)]"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 px-6 py-4 font-display font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)]"
             >
               <MessageCircle className="h-5 w-5" /> Chat on WhatsApp
             </a>
@@ -115,7 +115,7 @@ export function Contact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
-        className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-black shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-transform hover:scale-110"
+        className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-white shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-transform hover:scale-110"
       >
         <MessageCircle className="h-6 w-6" />
         <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-emerald-500/40" />
