@@ -1,26 +1,28 @@
 import { Phone, MessageCircle, MapPin, Zap } from "lucide-react";
+import { waGeneric, PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
 
 const items = [
   {
     icon: Phone,
     label: "Call Now",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: PHONE_DISPLAY,
+    href: PHONE_TEL,
     bg: "bg-[var(--primary)]",
     fg: "text-white",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp Us",
-    value: "+91 98765 43210",
-    href: "https://wa.me/919876543210",
-    bg: "bg-emerald-500",
+    value: PHONE_DISPLAY,
+    href: waGeneric,
+    bg: "",
     fg: "text-white",
+    style: { backgroundColor: "#25D366" } as React.CSSProperties,
   },
   {
     icon: MapPin,
     label: "Visit Our Store",
-    value: "Gurgaon, Haryana",
+    value: "Kankrola, Gurugram",
     href: "https://share.google/mhPiMDQcakYCXs0zZ",
     bg: "bg-white",
     fg: "text-[var(--primary)]",
@@ -58,7 +60,10 @@ export function CtaBand() {
               rel={it.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-white/10"
             >
-              <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${it.bg} ${it.fg}`}>
+              <span
+                className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${it.bg} ${it.fg}`}
+                style={it.style}
+              >
                 <it.icon className="h-5 w-5" />
               </span>
               <div>
