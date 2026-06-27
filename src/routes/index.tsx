@@ -8,6 +8,7 @@ import { Installations } from "@/components/site/Installations";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,6 +26,7 @@ function Index() {
       <Contact />
       <CtaBand />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { waProduct } from "@/lib/whatsapp";
 import automotiveBattery from "@/assets/products/automotive-battery.jpg";
 import inverterBattery from "@/assets/products/inverter-battery.jpg";
 import inverter from "@/assets/products/inverter.jpg";
@@ -108,10 +109,14 @@ export function Categories() {
 
                 <div className="mt-auto pt-3">
                   <a
-                    href="#contact"
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-[var(--primary)] to-[#3b82f6] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)] hover:brightness-110"
+                    href={waProduct(c.title)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Enquire about ${c.title} on WhatsApp`}
+                    className="inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:brightness-110 hover:shadow-[0_8px_20px_-6px_rgba(37,211,102,0.45)]"
+                    style={{ backgroundColor: "#25D366" }}
                   >
-                    Learn More
+                    Enquire on WhatsApp
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 </div>

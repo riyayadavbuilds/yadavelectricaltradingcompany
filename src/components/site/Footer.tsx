@@ -1,4 +1,5 @@
 import { Zap, Facebook, Instagram, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { waGeneric, PHONE_DISPLAY, PHONE_TEL } from "@/lib/whatsapp";
 
 const company = ["About Us", "Our Services", "Projects", "Contact Us"];
 const products = ["Batteries", "Inverters", "Fans", "Coolers", "Accessories"];
@@ -33,16 +34,32 @@ export function Footer() {
               Your trusted partner for all electrical solutions and services.
             </p>
             <div className="mt-5 flex gap-2.5">
-              {[Facebook, Instagram, MessageCircle].map((I, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="grid h-9 w-9 place-items-center rounded-full bg-white/8 transition-colors hover:bg-[var(--primary)]"
-                >
-                  <I className="h-4 w-4" />
-                </a>
-              ))}
+              <a href="#" aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-full bg-white/8 transition-colors hover:bg-[var(--primary)]">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="#" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full bg-white/8 transition-colors hover:bg-[var(--primary)]">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href={waGeneric}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="grid h-9 w-9 place-items-center rounded-full transition-transform hover:scale-110"
+                style={{ backgroundColor: "#25D366" }}
+              >
+                <MessageCircle className="h-4 w-4" />
+              </a>
             </div>
+            <a
+              href={waGeneric}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+              style={{ backgroundColor: "#25D366" }}
+            >
+              <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
+            </a>
           </div>
 
           <FCol title="Company" items={company.map((l) => ({ l, h: "#" }))} />
@@ -52,9 +69,17 @@ export function Footer() {
           <div>
             <div className="font-display text-sm font-bold">Contact Info</div>
             <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 text-[var(--electric-glow)]" />
-                +91 98765 43210
+              <li>
+                <a href={PHONE_TEL} className="flex items-center gap-2.5 transition-colors hover:text-white">
+                  <Phone className="h-4 w-4 text-[var(--electric-glow)]" />
+                  {PHONE_DISPLAY}
+                </a>
+              </li>
+              <li>
+                <a href={waGeneric} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 transition-colors hover:text-white">
+                  <MessageCircle className="h-4 w-4 text-[var(--electric-glow)]" />
+                  WhatsApp Us
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-[var(--electric-glow)]" />
@@ -62,7 +87,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <MapPin className="h-4 w-4 text-[var(--electric-glow)]" />
-                Gurgaon, Haryana
+                Kankrola Bhangrola, Gurugram
               </li>
             </ul>
           </div>

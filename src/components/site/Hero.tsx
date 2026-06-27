@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Phone, ArrowRight, Star, Truck, Wrench, ShieldCheck, Zap } from "lucide-react";
+import { Phone, ArrowRight, Star, Truck, Wrench, ShieldCheck, Zap, MessageCircle } from "lucide-react";
+import { waHero } from "@/lib/whatsapp";
 import inverter from "@/assets/inverter.png";
 import battery from "@/assets/battery.png";
 import cooler from "@/assets/cooler.png";
@@ -64,11 +65,21 @@ export function Hero() {
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <a
+              href={waHero}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_28px_-10px_rgba(37,211,102,0.6)] transition-transform hover:scale-[1.02]"
+              style={{ backgroundColor: "#25D366" }}
+            >
+              <MessageCircle className="h-4 w-4" fill="white" strokeWidth={1.6} />
+              Get Quote on WhatsApp
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a
               href="#categories"
-              className="group inline-flex items-center gap-2 rounded-xl bg-[var(--navy)] px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-xl bg-[var(--navy)] px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
             >
               Explore Products
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="tel:+919873490167"
