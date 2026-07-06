@@ -3,9 +3,9 @@ import { Users, Smile, CheckCircle2, ArrowRight } from "lucide-react";
 import owner from "@/assets/owner.jpg";
 
 const stats = [
-  { icon: Users, k: "20+", l: "Years of Experience" },
-  { icon: Smile, k: "1000+", l: "Happy Customers" },
-  { icon: CheckCircle2, k: "500+", l: "Installations Completed" },
+  { icon: Users, k: "18+", l: "Years Experience" },
+  { icon: Smile, k: "10,000+", l: "Happy Customers" },
+  { icon: CheckCircle2, k: "50+", l: "Trusted Brands" },
 ];
 
 export function About() {
@@ -32,16 +32,16 @@ export function About() {
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--primary)]" />
               About Us
             </div>
-            <h2 className="mt-3 font-display text-4xl font-extrabold leading-tight text-[var(--navy)] md:text-5xl">
+            <h2 className="mt-4 font-display text-4xl leading-tight text-[var(--navy)] md:text-5xl">
               Powering Homes &amp;
               <br />
-              Businesses with Trust
+              Businesses <span className="italic text-[var(--electric)]">with Trust.</span>
             </h2>
             <p className="mt-5 max-w-xl text-base text-slate-600">
-              We are a leading electrical solutions provider in Gurugram,
-              offering high-quality products and professional installation
-              services. Customer satisfaction and reliability are our top
-              priorities.
+              Since 2007, Yadav Electrical Trading Company has powered
+              thousands of homes, shops and businesses across Gurgaon with
+              genuine products, fair pricing and hands-on expertise from
+              owner Mr. Harkesh Yadav himself.
             </p>
 
             <a
