@@ -3,7 +3,7 @@ import {
   ShieldCheck,
   Truck,
   Wrench,
-  HeadphonesIcon,
+  Headphones,
   Store,
   Boxes,
   ClipboardCheck,
@@ -44,7 +44,7 @@ const items = [
     d: "Trained technicians handle wiring, mounting and commissioning safely.",
   },
   {
-    icon: HeadphonesIcon,
+    icon: Headphones,
     t: "After-Sales Support",
     d: "Warranty claims, service requests and troubleshooting — one call away.",
   },
