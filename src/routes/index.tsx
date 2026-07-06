@@ -3,7 +3,10 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
 import { Categories } from "@/components/site/Categories";
+import { Brands } from "@/components/site/Brands";
 import { Features } from "@/components/site/Features";
+import { Services } from "@/components/site/Services";
+import { Reviews } from "@/components/site/Reviews";
 import { Installations } from "@/components/site/Installations";
 import { CtaBand } from "@/components/site/CtaBand";
 import { Contact } from "@/components/site/Contact";
@@ -19,10 +22,13 @@ function Index() {
     <main className="relative min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <About />
       <Categories />
+      <Brands />
+      <About />
       <Features />
+      <Services />
       <Installations />
+      <Reviews />
       <Contact />
       <CtaBand />
       <Footer />
