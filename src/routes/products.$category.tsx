@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, MessageCircle, ShieldCheck, Truck, Wrench } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { ProductCard } from "@/components/site/ProductCard";
-import { categories, getBrand, getCategory, productsInCategory } from "@/data/catalog";
+import { categories, getBrand, getCategory, productsInCategory, type Category } from "@/data/catalog";
 import { waBrand, waGeneric } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/products/$category")({
@@ -41,7 +41,7 @@ function NotFoundCategory() {
 }
 
 function CategoryPage() {
-  const { category } = Route.useLoaderData();
+  const { category } = Route.useLoaderData() as { category: Category };
   const items = productsInCategory(category.slug);
 
   return (
