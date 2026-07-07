@@ -54,3 +54,48 @@ export const waHero = waLink(waMessages.hero);
 export const waFloating = waLink(waMessages.floating);
 export const waGeneric = waLink(waMessages.generic);
 export const waProduct = (name: string) => waLink(waMessages.product(name));
+
+export function waProductDetailed(p: {
+  name: string;
+  brand?: string;
+  model?: string;
+  category?: string;
+}) {
+  const lines = [
+    `Hello ${BRAND},`,
+    ``,
+    `I am interested in:`,
+    ``,
+    `Product: ${p.name}`,
+    `Brand: ${p.brand ?? "-"}`,
+    `Model: ${p.model ?? "-"}`,
+    `Category: ${p.category ?? "-"}`,
+    `Quantity: `,
+    `Delivery Location: `,
+    ``,
+    `Please share price and availability.`,
+  ];
+  return waLink(lines.join("\n"));
+}
+
+export function waBrand(brand: string) {
+  const lines = [
+    `Hello ${BRAND},`,
+    ``,
+    `I would like to enquire about products from the brand: ${brand}.`,
+    ``,
+    `Please share available range, prices and stock.`,
+  ];
+  return waLink(lines.join("\n"));
+}
+
+export function waStock() {
+  const lines = [
+    `Hello ${BRAND},`,
+    ``,
+    `I saw your live stock gallery online.`,
+    ``,
+    `Please share latest availability and prices for the items I need.`,
+  ];
+  return waLink(lines.join("\n"));
+}
