@@ -1,5 +1,8 @@
 // Auto-collected warehouse/store photos from src/assets/stock/*.asset.json
-const modules = import.meta.glob("../assets/stock/*.asset.json", { eager: true }) as Record<string, { default: { url: string; original_filename: string } }>;
+const modules = import.meta.glob("../assets/stock/*.jpg", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
 
 export type StockImage = { url: string; name: string; category: StockCategory };
 
@@ -29,18 +32,17 @@ const tags: Record<number, StockCategory> = {
 };
 
 export const stockImages: StockImage[] = Object.entries(modules)
-  .map(([path, mod]) => {
-    const m = path.match(/stock-(\d+)/);
+  .map(([path, url]) => {
+    const m = path.match(/stock-(\d+)\.jpg$/);
     const idx = m ? parseInt(m[1], 10) : 0;
+
     return {
-      url: mod.default.url,
-      name: mod.default.original_filename,
+      url,
+      name: `stock-${String(idx).padStart(2, "0")}.jpg`,
       category: tags[idx] ?? "Warehouse",
       _idx: idx,
     };
   })
-  .sort((a, b) => (a as any)._idx - (b as any)._idx)
-  .map(({ url, name, category }) => ({ url, name, category }));
 
 export const stockFilters: (StockCategory | "All")[] = [
   "All",
